@@ -35,7 +35,9 @@ int main(int narg, char *varg[])
     std::string filename = "init_statevector.csv";
     std::vector<Complex> amps = readAmpsFromFile(filename);
     int size = amps.size();
-    double reals[size], imags[size];
+    double *reals, *imags;
+    reals = new double[size];
+    imags = new double[size];
     for (int i = 0; i < size; i++)
     {
         reals[i] = amps[i].real;
