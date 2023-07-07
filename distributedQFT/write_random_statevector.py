@@ -1,15 +1,16 @@
+import sys
 from qiskit.quantum_info import random_statevector
 
 
 # SETTINGS
 #########################################
-num_qubits = 3
 seed = 42
 #########################################
 
 
 if __name__ == '__main__':
 
+    num_qubits = int(sys.argv[1])
     statevector = random_statevector(dims=2**num_qubits, seed=seed)
     filepath = './init_statevector.csv'
 
