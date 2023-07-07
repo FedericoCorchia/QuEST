@@ -13,7 +13,7 @@ std::vector<Complex> readAmpsFromFile(const std::string &filepath)
     if (!file)
     {
         std::cerr << "Failed to open the file.\n";
-        return {};
+        return std::vector<Complex>();
     }
     std::vector<Complex> amps;
     std::string line;
